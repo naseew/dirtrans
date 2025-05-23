@@ -28,14 +28,14 @@ header {
     padding: 2.5rem 0 1.5rem 0;
     text-align: center;
     border-bottom: 2px solid #444;
-    margin-bottom: 35px;
+    /* margin-bottom: 35px; Removido para o aviso do questionário ficar mais próximo */
 }
 
 header h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
-    color: #f5a9b8;
+    color: #f5a9b8; /* Rosa claro para tema trans */
     text-shadow: 1px 1px 2px #000;
     margin-bottom: 0.4rem;
     letter-spacing: 1.5px;
@@ -48,6 +48,64 @@ header p {
     font-style: italic;
 }
 
+/* --- BLOCO DO QUESTIONÁRIO --- */
+.aviso-questionario-destaque {
+    background-color: rgba(91, 206, 250, 0.08); /* Azul claro translúcido, tema do h2 */
+    color: #d1eaf0; /* Texto claro para contraste com fundo escuro */
+    padding: 25px 0;
+    text-align: center;
+    border-bottom: 1px solid #333; /* Linha sutil para separar */
+    margin-bottom: 35px; /* Espaço antes do conteúdo principal */
+}
+
+.aviso-questionario-destaque h2 {
+    font-family: 'Oswald', sans-serif; /* Manter consistência com outros h2 */
+    font-weight: 500;
+    color: #5BCEFA; /* Azul vibrante do tema */
+    font-size: 1.8rem; /* Um pouco menor que os h2 de seção */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: none; /* Sem borda inferior aqui para um visual mais limpo no bloco */
+}
+
+.aviso-questionario-destaque p {
+    font-family: 'Roboto Condensed', sans-serif; /* Consistência com o corpo do texto */
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #c0c0c0;
+}
+.aviso-questionario-destaque p strong {
+    color: #e0e0e0;
+    font-weight: 700;
+}
+
+.botao-questionario {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    background-color: #f5a9b8; /* Rosa claro, cor de destaque do h1 */
+    color: #1e1e1e; /* Texto escuro para contraste no botão claro */
+    padding: 12px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-size: 1.05rem;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.botao-questionario:hover {
+    background-color: #5BCEFA; /* Azul no hover */
+    color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+
 /* --- MAIN CONTENT & SECTIONS --- */
 main {
     flex-grow: 1;
@@ -55,30 +113,30 @@ main {
 }
 
 section {
-    background-color: rgba(20, 20, 20, 0.4);
+    background-color: rgba(20, 20, 20, 0.4); /* Fundo escuro translúcido para seções */
     margin-bottom: 35px;
     padding: 25px 30px;
-    border: 1px solid #383838;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3) inset;
+    border: 1px solid #383838; /* Borda sutil para definir as seções */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3) inset; /* Sombra interna sutil */
 }
 
 h2 {
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
-    color: #5BCEFA;
+    color: #5BCEFA; /* Azul vibrante para títulos de seção */
     font-size: 2rem;
     margin-bottom: 25px;
     padding-bottom: 12px;
     text-align: left;
     text-transform: uppercase;
-    border-bottom: 1px solid #5BCEFA;
+    border-bottom: 1px solid #5BCEFA; /* Linha inferior na cor do título */
     letter-spacing: 1px;
 }
 
-h3 {
+h3 { /* Para subtítulos dentro das seções */
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #e0e0e0;
+    color: #e0e0e0; /* Cor clara para boa legibilidade */
     margin-bottom: 15px;
     font-size: 1.3rem;
 }
@@ -86,52 +144,52 @@ h3 {
 /* --- CARDS (Info e Ações) --- */
 .info-cards, .acoes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Layout responsivo para cards */
     gap: 25px;
     margin-top: 20px;
 }
 
 .info-card, .acao-card {
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: rgba(255, 255, 255, 0.03); /* Fundo muito sutil para cards */
     padding: 20px;
-    border: 1px solid #4a4a4a;
+    border: 1px solid #4a4a4a; /* Borda para definir os cards */
     transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Para alinhar conteúdo se necessário */
+    flex-direction: column; /* Conteúdo do card empilhado verticalmente */
 }
 .info-card:hover, .acao-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-3px); /* Efeito sutil de levantar no hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra mais pronunciada no hover */
 }
 
-.info-card h3, .acao-card h3 {
-    color: #f5a9b8;
+.info-card h3, .acao-card h3 { /* Títulos dentro dos cards */
+    color: #f5a9b8; /* Rosa claro, cor de destaque */
     font-size: 1.15rem;
-    border-bottom: 1px dotted #f5a9b8;
+    border-bottom: 1px dotted #f5a9b8; /* Linha pontilhada sutil */
     padding-bottom: 5px;
-    display: inline-block;
+    display: inline-block; /* Para a borda não ocupar a largura toda */
     margin-bottom: 12px;
 }
-.card-icon {
-    font-family: sans-serif;
+.card-icon { /* Para os emojis/ícones nos títulos dos cards */
+    font-family: sans-serif; /* Para garantir que emojis funcionem */
     margin-right: 8px;
     font-size: 1.1em;
-    color: #5BCEFA;
+    color: #5BCEFA; /* Azul vibrante */
 }
 
 .info-card p, .acao-card p {
     font-size: 0.95rem;
-    color: #b0b0b0;
+    color: #b0b0b0; /* Cinza claro para texto do card */
     line-height: 1.6;
-    flex-grow: 1;
+    flex-grow: 1; /* Para que o parágrafo ocupe o espaço restante se o card tiver altura variável */
 }
 
-.destaque-informativo {
-    background-color: rgba(91, 206, 250, 0.1);
-    color: #bde6f8;
+.destaque-informativo { /* Bloco de texto destacado dentro de seções */
+    background-color: rgba(91, 206, 250, 0.1); /* Fundo azul bem claro translúcido */
+    color: #bde6f8; /* Texto azulado claro */
     padding: 15px;
     margin-top: 25px;
-    border-left: 4px solid #5BCEFA;
+    border-left: 4px solid #5BCEFA; /* Borda lateral azul */
     text-align: left;
     font-style: italic;
 }
@@ -145,37 +203,37 @@ h3 {
 .lista-com-icones li {
     margin-bottom: 18px;
     display: flex;
-    align-items: flex-start;
-    color: #c0c0c0;
+    align-items: flex-start; /* Alinha o ícone com o início do texto */
+    color: #c0c0c0; /* Cor do texto da lista */
     line-height: 1.6;
 }
-.li-icon {
+.li-icon { /* Para os emojis/ícones no início dos itens da lista */
     font-family: sans-serif;
     margin-right: 12px;
-    color: #5BCEFA;
+    color: #5BCEFA; /* Azul vibrante */
     font-size: 1.1em;
-    min-width: 22px;
-    padding-top: 3px;
+    min-width: 22px; /* Para alinhar o texto mesmo com ícones de larguras diferentes */
+    padding-top: 3px; /* Ajuste fino vertical do ícone */
 }
-.lista-com-icones li strong {
+.lista-com-icones li strong { /* Para texto em negrito dentro dos itens da lista */
     color: #e0e0e0;
     font-weight: 700;
-    display: block;
+    display: block; /* Para o strong ocupar uma linha se necessário */
     margin-bottom: 4px;
 }
-.lista-com-icones li p, .lista-com-icones li {
+.lista-com-icones li p, .lista-com-icones li { /* Estilo geral para texto dentro da lista */
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 0.95rem;
 }
 
-#recursos-e-apoio a {
-    color: #f5a9b8;
+#recursos-e-apoio a { /* Links específicos na seção de recursos */
+    color: #f5a9b8; /* Rosa claro */
     text-decoration: none;
     border-bottom: 1px dotted #f5a9b8;
     transition: color 0.2s, border-bottom-color 0.2s;
 }
 #recursos-e-apoio a:hover {
-    color: #fff;
+    color: #fff; /* Branco no hover */
     border-bottom-color: #fff;
 }
 
@@ -183,9 +241,9 @@ h3 {
 .ods-container {
     margin-top: 35px;
     padding: 25px;
-    background-color: rgba(0,0,0, 0.15);
-    border: 1px solid #303030;
-    border-left: 5px solid #5BCEFA;
+    background-color: rgba(0,0,0, 0.15); /* Fundo escuro sutil */
+    border: 1px solid #303030; /* Borda escura */
+    border-left: 5px solid #5BCEFA; /* Destaque lateral azul */
 }
 .ods-container h3 {
     color: #e0e0e0;
@@ -196,7 +254,7 @@ h3 {
     margin-bottom: 15px;
     text-align: center;
 }
-.ods-container > p {
+.ods-container > p { /* Parágrafo introdutório do container ODS */
     font-size: 0.95rem;
     color: #b0b0b0;
     margin-bottom: 30px;
@@ -204,13 +262,13 @@ h3 {
     line-height: 1.6;
 }
 
-.ods-items {
+.ods-items { /* Grid para os itens ODS */
     display: grid;
     gap: 25px;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Começa com uma coluna */
 }
 
-.ods-item {
+.ods-item { /* Estilo de cada item ODS */
     background-color: rgba(255, 255, 255, 0.03);
     padding: 20px;
     border: 1px solid #4a4a4a;
@@ -218,19 +276,19 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow-wrap: break-word;
+    overflow-wrap: break-word; /* Quebra de palavra para textos longos */
     word-wrap: break-word;
     word-break: break-word;
 }
 
 .ods-item img {
-    width: 60px;
+    width: 60px; /* Tamanho fixo para as imagens ODS */
     height: 60px;
-    margin: 0 auto 15px auto;
-    flex-shrink: 0;
+    margin: 0 auto 15px auto; /* Centraliza a imagem */
+    flex-shrink: 0; /* Para não encolher */
 }
 
-.ods-item strong {
+.ods-item strong { /* Título do ODS */
     color: #dcdcdc;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -241,20 +299,20 @@ h3 {
     font-size: 1.05rem;
 }
 
-.ods-item p {
+.ods-item p { /* Descrição do ODS */
     font-size: 0.9rem;
     color: #b0b0b0;
     line-height: 1.65;
     margin-bottom: 0;
-    flex-grow: 1;
+    flex-grow: 1; /* Para ocupar espaço restante */
 }
 
 /* --- BOTÃO e GLOSSÁRIO --- */
 #toggleGlossarioBtn {
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
-    background-color: #5BCEFA;
-    color: #1e1e1e;
+    background-color: #5BCEFA; /* Azul vibrante */
+    color: #1e1e1e; /* Texto escuro */
     border: none;
     padding: 10px 22px;
     cursor: pointer;
@@ -263,19 +321,19 @@ h3 {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border-radius: 3px;
-    transition: background-color 0.2s, transform 0.2s;
+    transition: background-color 0.2s, transform 0.2s, color 0.2s;
 }
 #toggleGlossarioBtn:hover {
-    background-color: #f5a9b8;
+    background-color: #f5a9b8; /* Rosa no hover */
     color: #1e1e1e;
     transform: translateY(-2px);
 }
 
-.hidden {
+.hidden { /* Classe para esconder elementos (usada pelo JS) */
     display: none;
 }
 
-#glossarioTrans {
+#glossarioTrans { /* Estilo para o bloco do glossário */
     background-color: rgba(0, 0, 0, 0.2);
     border: 1px solid #444;
     padding: 20px;
@@ -285,7 +343,7 @@ h3 {
 #glossarioTrans h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #f5a9b8;
+    color: #f5a9b8; /* Rosa */
     margin-bottom: 12px;
 }
 #glossarioTrans p {
@@ -302,27 +360,27 @@ h3 {
     padding: 20px;
     border: 1px solid #383838;
 }
-.responsive-img {
+.responsive-img { /* Para a imagem de destaque e outras que precisem ser responsivas */
     max-width: 100%;
     height: auto;
-    border: 1px solid #555;
+    border: 1px solid #555; /* Borda sutil na imagem */
     margin-bottom: 10px;
 }
 .legenda-imagem {
     font-family: 'Roboto Condensed', sans-serif;
     font-style: italic;
     font-size: 0.9rem;
-    color: #999;
+    color: #999; /* Cinza para legenda */
 }
 
 /* --- FOOTER --- */
 footer {
-    background-color: #111;
-    color: #777;
+    background-color: #111; /* Fundo bem escuro para o rodapé */
+    color: #777; /* Texto cinza claro */
     text-align: center;
     padding: 2rem 0;
-    margin-top: auto;
-    border-top: 1px solid #333;
+    margin-top: auto; /* Empurra para o final da página */
+    border-top: 1px solid #333; /* Linha sutil no topo */
     font-family: 'Roboto Condensed', sans-serif;
 }
 footer p {
@@ -331,7 +389,7 @@ footer p {
 }
 footer small {
     font-size: 0.8rem;
-    color: #555;
+    color: #555; /* Cinza mais escuro para detalhes */
 }
 .ods-footer {
     margin-top: 8px;
@@ -342,30 +400,40 @@ footer small {
 }
 
 /* --- RESPONSIVIDADE --- */
-@media (min-width: 640px) {
+@media (min-width: 640px) { /* Para tablets e telas maiores */
     .ods-items {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas para itens ODS */
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 900px) { /* Para desktops */
     .ods-items {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* Três colunas para itens ODS */
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Para telas menores/celulares */
     header h1 {
-        font-size: 2.2rem;
+        font-size: 2.2rem; /* Reduz tamanho da fonte do título principal */
     }
     h2 {
-        font-size: 1.7rem;
+        font-size: 1.7rem; /* Reduz tamanho dos títulos de seção */
+    }
+    .aviso-questionario-destaque h2 {
+        font-size: 1.6rem; /* Reduz título do aviso do questionário */
+    }
+    .aviso-questionario-destaque p {
+        font-size: 1rem;
+    }
+    .botao-questionario {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
     .container {
         width: 95%;
-        padding: 0 15px;
+        padding: 0 15px; /* Menos padding lateral */
     }
     .info-cards, .acoes-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Cards em uma única coluna */
     }
 }
