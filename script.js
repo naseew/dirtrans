@@ -1,23 +1,31 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Atualiza o ano no rodapé
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Atualiza o ano no rodapé ---
     const anoAtualSpan = document.getElementById('anoAtual');
     if (anoAtualSpan) {
         anoAtualSpan.textContent = new Date().getFullYear();
     }
 
-    // Funcionalidade do botão "Ver Mini Glossário de Termos"
-    const toggleGlossarioBtn = document.getElementById('toggleGlossarioBtn');
-    const glossarioTransDiv = document.getElementById('glossarioTrans');
+    // --- Lógica para o botão "Voltar ao Topo" ---
+    const backToTopButton = document.getElementById('back-to-top');
 
-    if (toggleGlossarioBtn && glossarioTransDiv) {
-        toggleGlossarioBtn.addEventListener('click', function() {
-            if (glossarioTransDiv.classList.contains('hidden')) {
-                glossarioTransDiv.classList.remove('hidden');
-                toggleGlossarioBtn.textContent = 'Esconder Mini Glossário';
+    if (backToTopButton) {
+        // Mostra ou esconde o botão dependendo da posição de rolagem
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
             } else {
-                glossarioTransDiv.classList.add('hidden');
-                toggleGlossarioBtn.textContent = 'Ver Mini Glossário de Termos';
+                backToTopButton.classList.remove('visible');
             }
         });
+
+        // Faz a rolagem suave para o topo ao clicar
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     }
+
 });
