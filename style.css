@@ -14,7 +14,7 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     line-height: 1.7;
     color: #e0e0e0;
-    font-size: 16px; /* Tamanho base */
+    font-size: 17px; 
 }
 
 .container {
@@ -23,30 +23,68 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
-
-/* --- HEADER --- */
 header {
     background-color: #111;
-    padding: 3rem 0;
+    padding: 3rem 1rem;
     text-align: center;
     border-bottom: 2px solid #333;
+    overflow: hidden;
+}
+
+.header-content {
+    display: inline-block;
+    position: relative;
+    padding: 1.5rem 2rem;
+    background-color: #e0e0e0;
+    transform: rotate(-2deg);
+}
+
+.header-tape {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: rgba(255, 255, 0, 0.4);
+    border-left: 1px dashed rgba(0,0,0,0.3);
+    border-right: 1px dashed rgba(0,0,0,0.3);
+}
+
+.tape-top {
+    top: -15px;
+    left: -20px;
+    transform: rotate(-15deg);
+}
+
+.tape-bottom {
+    bottom: -10px;
+    right: -30px;
+    transform: rotate(10deg);
 }
 
 header h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 3rem;
-    color: #f5a9b8; /* Rosa claro */
-    text-shadow: 1px 1px 3px #000;
-    margin-bottom: 0.5rem;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: #111;
+    margin: 0;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    font-weight: 700;
 }
 
-header p {
-    font-family: 'Montserrat', sans-serif;
-    color: #aaa;
-    font-size: 1.1rem;
+.h1-highlight {
+    background-color: #f5a9b8;
+    color: #111;
+    padding: 0 0.5rem;
 }
+
+.tagline {
+    font-family: 'Chakra Petch', sans-serif;
+    color: #333;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
 
 /* --- BARRA DE NAVEGAÇÃO --- */
 .navbar {
@@ -68,17 +106,61 @@ header p {
 .nav-container li a {
     color: #ddd;
     text-decoration: none;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
     text-transform: uppercase;
-    padding: 0.8rem 1.2rem;
+    padding: 0.8rem 1rem;
     display: block;
     transition: background-color 0.2s ease, color 0.2s ease;
+    font-size: 1rem;
 }
 
 .nav-container li a:hover {
     background-color: #5BCEFA; /* Azul */
     color: #111;
 }
+
+/* --- BANNER DESTAQUE COTAS --- */
+.destaque-cotas {
+    background-color: #FFFF00; /* Amarelo vibrante */
+    color: #111;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 2px solid #333;
+}
+
+.destaque-cotas h2 {
+    font-family: 'Chakra Petch', sans-serif;
+    color: #111;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.destaque-cotas p {
+    font-family: 'Roboto Condensed', sans-serif;
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.6;
+}
+
+.btn-destaque {
+    display: inline-block;
+    background-color: #111;
+    color: #FFFF00;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-family: 'Chakra Petch', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 2px solid #111;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-destaque:hover {
+    background-color: transparent;
+    color: #111;
+}
+
 
 /* --- CONTEÚDO PRINCIPAL E SEÇÕES --- */
 main {
@@ -95,13 +177,21 @@ section:last-of-type {
 }
 
 h2 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
     color: #5BCEFA; /* Azul */
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+h3 {
+    font-family: 'Chakra Petch', sans-serif;
+    color: #e0e0e0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 section > p {
@@ -112,6 +202,16 @@ section > p {
     margin-left: auto;
     margin-right: auto;
 }
+
+.destaque-informativo {
+    background-color: rgba(91, 206, 250, 0.1);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-left: 4px solid #5BCEFA;
+    font-style: italic;
+    color: #d1eaf0;
+}
+
 
 /* --- CARDS (Informativos e Ações) --- */
 .info-cards, .acoes-grid {
@@ -153,6 +253,10 @@ section > p {
     margin: 1.5rem auto 0;
 }
 
+#cotas-universitarias .lista-com-icones {
+    margin-left: 0;
+}
+
 .lista-com-icones li {
     margin-bottom: 1.2rem;
     display: flex;
@@ -179,7 +283,7 @@ section > p {
 
 #recursos h3 {
     text-align: center;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
     color: #ddd;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -268,20 +372,30 @@ footer small {
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
-    body {
-        font-size: 17px; /* Aumenta fonte base em telas menores */
-    }
     header h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     h2 {
         font-size: 1.9rem;
     }
     .nav-container ul {
         justify-content: space-around;
-        font-size: 0.9rem;
     }
     .nav-container li a {
         padding: 0.8rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        transform: rotate(0);
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .tape-top, .tape-bottom {
+        display: none;
     }
 }
