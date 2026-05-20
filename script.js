@@ -1,31 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
+function switchTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+    });
 
-    // --- Atualiza o ano no rodapé ---
-    const anoAtualSpan = document.getElementById('anoAtual');
-    if (anoAtualSpan) {
-        anoAtualSpan.textContent = new Date().getFullYear();
+    const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn => btn.getAttribute('onclick').includes(tabId));
+    if (activeBtn) {
+        activeBtn.classList.add('active');
     }
 
-    // --- Lógica para o botão "Voltar ao Topo" ---
-    const backToTopButton = document.getElementById('back-to-top');
-
-    if (backToTopButton) {
-        // Mostra ou esconde o botão dependendo da posição de rolagem
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
-
-        // Faz a rolagem suave para o topo ao clicar
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+    const activeContent = document.getElementById('tab-' + tabId);
+    if (activeContent) {
+        activeContent.classList.add('active');
     }
+}
 
-});
+function toggleOds(odsId) {
+    const details = document.getElementById(odsId);
+    if (details) {
+        details.classList.toggle('active');
+    }
+}
