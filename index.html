@@ -10,24 +10,37 @@
     <header class="header">
         <div class="container">
             <h1>Terra Digital</h1>
-            <p>Conectando servidores e frequentadores do INCRA-DF à alimentação saudável e sustentável</p>
+            <p>Conectando servidores e frequentadores do INCRA-DF à alimentação saudável, fortalecendo a agricultura familiar e protegendo o Cerrado.</p>
         </div>
     </header>
 
     <main class="main container">
         <section class="card alert-card">
-            <h2>Feira de Orgânicos no INCRA!</h2>
-            <p>Sabia que você tem acesso a alimentos frescos e livres de agrotóxicos sem sair do trabalho? Toda terça-feira de manhã, a feira do Grupo Vida e Preservação do Assentamento Colônia I acontece bem aqui, no térreo do Edifício Palácio do Desenvolvimento.</p>
-            <div class="fair-info">
-                <p><strong>Quando:</strong> Terças-feiras, das 08:00 às 12:00</p>
-                <p><strong>Onde:</strong> Saguão do Térreo (Palácio do Desenvolvimento, SBN)</p>
+            <div class="card-content-split">
+                <div class="text-content">
+                    <h2>Feira de Orgânicos no INCRA!</h2>
+                    <p>Sabia que você tem acesso a alimentos frescos e livres de agrotóxicos sem sair do ambiente de trabalho? Toda terça-feira de manhã, a feira do Grupo Vida e Preservação do Assentamento Colônia I acontece bem aqui, nas dependências do nosso edifício.</p>
+                    <div class="fair-info">
+                        <p><strong>Quando:</strong> Terças-feiras, das 08:00 às 12:00</p>
+                        <p><strong>Onde:</strong> Saguão do Térreo (Palácio do Desenvolvimento, SBN)</p>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80" alt="Cesta de vegetais frescos e orgânicos" class="content-img">
+                </div>
             </div>
         </section>
 
         <section class="card">
             <h2>Agroecologia e a Conservação do Cerrado</h2>
-            <p>O Distrito Federal abriga uma rica biodiversidade protegida pelo bioma do Cerrado, a caixa d'água do Brasil. No entanto, a expansão do uso descontrolado de fertilizantes químicos e pesticidas no modelo agrícola convencional ameaça diretamente a qualidade dos recursos hídricos e degrada o solo local. A agroecologia surge como uma alternativa científica e social vital, regenerando os ecossistemas por meio do manejo sustentável que respeita os ciclos naturais, dispensa insumos sintéticos e protege o lençol freático contra a contaminação química de longo prazo.</p>
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Plantação sustentável ao pôr do sol" class="content-img-full">
+            <p>O Distrito Federal abriga uma rica biodiversidade protegida pelo bioma do Cerrado, a grande caixa d'água do Brasil. No entanto, a expansão do uso descontrolado de fertilizantes químicos e pesticidas no modelo agrícola convencional ameaça diretamente a qualidade dos recursos hídricos e degrada o solo local. A agroecologia surge como uma alternativa científica e social vital, regenerando os ecossistemas por meio do manejo sustentável que respeita os ciclos naturais, dispensa insumos sintéticos e protege o lençol freático contra a contaminação química de longo prazo.</p>
             <p>Consumir alimentos agroecológicos apoia diretamente os assentamentos de reforma agrária da nossa região que utilizam técnicas de cultivo biológico, rotação de culturas e preservação das matas ciliares. Dessa forma, a escolha alimentar de cada servidor do INCRA-DF converte-se em um ato ativo de proteção ambiental coletiva.</p>
+        </section>
+
+        <section class="card">
+            <h2>O Impacto Invisível na sua Saúde</h2>
+            <p>A ingestão diária de resíduos de agrotóxicos presentes em alimentos convencionais está cientificamente ligada a um aumento substancial no estresse oxidativo celular, desregulação endócrina e enfraquecimento do sistema imunológico. Optar pelos produtos da nossa feira orgânica local significa nutrir o seu corpo com vitaminas reais, livres de toxinas, promovendo longevidade, disposição para a sua rotina de trabalho e prevenindo doenças crônicas a longo prazo.</p>
         </section>
 
         <section class="card">
@@ -78,6 +91,30 @@
         </section>
 
         <section class="card">
+            <h2>Perguntas Frequentes (FAQ)</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">Os produtos agroecológicos são muito mais caros?</button>
+                    <div class="faq-answer">
+                        <p>Ao comprar diretamente na feira do INCRA-DF, você elimina os intermediários e supermercados que inflacionam os preços. Na maioria das vezes, o valor é equivalente ou até menor do que o cobrado em mercados tradicionais, com a vantagem inestimável de investir na sua saúde e na economia solidária.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">Posso encomendar cestas para retirar na feira?</button>
+                    <div class="faq-answer">
+                        <p>Sim! Os produtores do Grupo Vida e Preservação aceitam encomendas prévias via WhatsApp. Você pode montar a sua cesta e apenas retirá-la rapidamente durante o seu intervalo na terça-feira de manhã.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">De onde vêm os produtos da feira do térreo?</button>
+                    <div class="faq-answer">
+                        <p>Os alimentos são plantados, colhidos e trazidos pelas próprias famílias trabalhadoras rurais do Assentamento Colônia I, localizado na região do Distrito Federal, garantindo o máximo de frescor e rasteabilidade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
             <h2>Mapeamento de Feiras e Contatos</h2>
             <p>Utilize os botões abaixo para explorar as feiras e alternativas de consumo sustentável que mapeamos para o seu dia a dia.</p>
             
@@ -88,7 +125,7 @@
 
             <div id="tab-incra" class="tab-content active">
                 <h3>Grupo Vida e Preservação</h3>
-                <p>Produtos cultivados de forma 100% agroecológica no Assentamento Colônia I. Além das terças presenciais, você pode encomendar cestas ou tirar dúvidas diretamente com os produtores rurais.</p>
+                <p>Produtos cultivados de forma 100% agroecológica no Assentamento Colônia I. Além das terças presenciais, você pode encomendar cestas ou tirar dúvidas diretamente com os produtores rurais através do botão abaixo.</p>
                 <a href="https://wa.me/5561999999999" target="_blank" class="btn">Falar com o Produtor via WhatsApp</a>
             </div>
 
@@ -101,6 +138,30 @@
                 <div class="list-item">
                     <h4>Feira de Orgânicos do Lago Sul</h4>
                     <p>Ocorre no Centro de Atividades do Lago Sul, QI 09. Sábados pela manhã, das 08:00 às 12:00.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Referências e Materiais de Estudo</h2>
+            <p>Para aprofundar seus conhecimentos sobre o impacto dos agrotóxicos na saúde pública e a importância da agricultura familiar no Distrito Federal, consulte os materiais oficiais e publicações científicas que embasam esta iniciativa:</p>
+            
+            <div class="ref-container">
+                <div class="ref-item">
+                    <h4><a href="https://www.emater.df.gov.br/wp-content/uploads/2020/03/FEIRAS-ORG%C3%82NICAS-DO-DISTRITO-FEDERAL.pdf" target="_blank">Lista Oficial de Feiras Orgânicas do DF</a></h4>
+                    <p>Guia publicado pela Emater-DF detalhando a localização e o funcionamento de todas as feiras agroecológicas mapeadas na capital.</p>
+                </div>
+                <div class="ref-item">
+                    <h4><a href="https://www.scielo.br/j/sdeb/a/hZ9dDsc63f6X6tS9S7796dD/?format=pdf&lang=pt" target="_blank">Territórios Saudáveis e Sustentáveis no DF (Fiocruz)</a></h4>
+                    <p>Artigo científico publicado na revista Saúde em Debate analisando a relação entre a contaminação por agrotóxicos e as iniciativas de agroecologia locais.</p>
+                </div>
+                <div class="ref-item">
+                    <h4><a href="http://repositorio.unb.br/bitstream/10482/35877/1/2019_LuizRaimundoTadeudaSilva.pdf" target="_blank">A Construção da Agroecologia no Distrito Federal</a></h4>
+                    <p>Dissertação da Universidade de Brasília (UnB) sobre a rede de políticas públicas de apoio aos pequenos produtores da nossa região.</p>
+                </div>
+                <div class="ref-item">
+                    <h4><a href="https://brasil.un.org/pt-br/sdgs" target="_blank">A Agenda 2030 (ONU)</a></h4>
+                    <p>Diretrizes globais da Organização das Nações Unidas que estabelecem os 17 Objetivos de Desenvolvimento Sustentável citados no projeto.</p>
                 </div>
             </div>
         </section>
